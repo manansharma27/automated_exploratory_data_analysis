@@ -4,6 +4,6 @@ matplotlib==3.2.1
 numpy==1.17.4
 seaborn==0.9.0
 scikit-learn==0.21.2
-base64==3.4
+base64==3.9
 time==3.7
 missigno==0.5.0
