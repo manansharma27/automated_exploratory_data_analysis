@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run Exploratory_Data_Analysis_App.py
+web: sh setup.sh && streamlit run Automated_EDA.py
