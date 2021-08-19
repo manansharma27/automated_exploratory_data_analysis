@@ -3,10 +3,7 @@
 import streamlit as st 
 import pandas as pd  
 import base64
-import time
 st.set_option('deprecation.showfileUploaderEncoding', False)
-
-timestr = time.strftime("%Y%m%d-%H%M%S")   #Making a variable taking current date,month and year
 
 # Data Viz Pkg
 import matplotlib.image as img 
@@ -24,9 +21,8 @@ st.image(image)
 def csv_download(data):
     csvfile = data.to_csv()
     b64 = base64.b64encode(csvfile.encode()).decode()
-    new_filename = "new_file_{}.csv".format(timestr)
     st.markdown("Download CSV File from below.")
-    href = f'<a href="data:file/csv;base64,{b64}" download="{new_filename}"> Download Here!!</a>'
+    href = f'<a href="data:file/csv;base64,{b64}" download="updated_dataset.csv"> Download Here!!</a>'
     st.markdown(href,unsafe_allow_html=True)
 
 #Making the main function
