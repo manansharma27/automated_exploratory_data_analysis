@@ -4,6 +4,7 @@ import streamlit as st
 import pandas as pd  
 import base64
 st.set_option('deprecation.showfileUploaderEncoding', False)
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Data Viz Pkg
 import matplotlib.image as img 
@@ -44,8 +45,11 @@ def main():
             st.write(df.describe())
             st.write("Shape")
             st.write(df.shape)
-            st.write("Datatype of columns")
-            st.write(df.dtypes)
+            st.write("Info of columns")
+            buffer = io.StringIO() 
+            df.info(buf=buffer)
+            s = buffer.getvalue() 
+            st.table(s)
                 
             if st.checkbox("Show Columns"):   
                 st.write(df.columns)    #To show columns of the dataset
@@ -87,8 +91,11 @@ def main():
             df = pd.read_csv(data,encoding = 'utf-8',engine='python')
             st.dataframe(df.head())
             
-            if st.checkbox("Show Datatypes of columns"):
-                st.write(df.dtypes)
+            if st.checkbox("Show Info of columns"):
+                buffer = io.StringIO() 
+           	df.info(buf=buffer)
+            	s = buffer.getvalue() 
+            	st.table(s)
                 
                 all_columns_names = df.columns.tolist()
                 #Making a dropdown option to choose the type of plot to generate
