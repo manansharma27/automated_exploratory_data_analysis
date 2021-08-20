@@ -13,7 +13,7 @@ matplotlib.use("Agg")
 import seaborn as sb 
 
 #Reading image and storing it
-image = img.imread("C:/Users/Manan/eda.png",0)
+image = img.imread("eda.png")
 #Displaying Image
 st.image(image)
 
