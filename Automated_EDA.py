@@ -84,7 +84,7 @@ def main():
                 all_columns3 = df.columns.to_list()
                 selected_columns3 = st.multiselect("Select Columns",all_columns3,key=2)
                 new_df3 = df[selected_columns3]
-                st.write(sb.boxplot(new_df3))      #Checking Outliers using boxplot
+                st.write(new_df3.plot(kind="box"))      #Checking Outliers using boxplot
                 st.pyplot()
                 
     elif choice == 'EDA':
