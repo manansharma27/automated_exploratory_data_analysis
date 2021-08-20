@@ -56,12 +56,6 @@ def main():
                 
             if st.checkbox("Show Columns"):   
                 st.write(df.columns)    #To show columns of the dataset
-            
-            if st.checkbox("Show Selected Columns"):
-                all_columns = df.columns.to_list()    #Taking all columns in a list
-                selected_columns = st.multiselect("Select Columns",all_columns,key=0)  #Making a dropdown to select columns
-                new_df = df[selected_columns]
-                st.dataframe(new_df)
                 
                 
             if st.checkbox("Null Values"):
@@ -71,20 +65,8 @@ def main():
                 st.write(sb.heatmap(df.isnull(),yticklabels=False,cbar=False,cmap='viridis'))      #Visulaizing null values
                 st.pyplot()
                 
-            if st.checkbox("Show Value counts of column/ columns"):
-                column = df.columns.to_list()
-                selected_column = st.selectbox("Select Column",column,key=1)
-                st.write(df[selected_column].value_counts())         #Checking value counts in selected column
-                
             if st.checkbox("Show Correlation Map of Columns"):
                 st.write(sb.heatmap(df.corr(),annot=True))      #Checking correlation using heatmap
-                st.pyplot()
-                
-            if st.checkbox("Check Outliers in columns"):
-                all_columns3 = df.columns.to_list()
-                selected_columns3 = st.multiselect("Select Columns",all_columns3,key=2)
-                new_df3 = df[selected_columns3]
-                st.write(new_df3.plot(kind="box"))      #Checking Outliers using boxplot
                 st.pyplot()
                 
     elif choice == 'EDA':
