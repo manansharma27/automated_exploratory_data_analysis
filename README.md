@@ -5,4 +5,8 @@ This app is made from Python and using Streamlit as the web framework.
 
 App Link - https://share.streamlit.io/manansharma27/automated_exploratory_data_analysis/main/Automated_EDA.py
 <br>
-<img src = 
+App Visuals
+<img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/img1.PNG">
+<img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/img3.PNG">
+<img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/img4.PNG">
+
