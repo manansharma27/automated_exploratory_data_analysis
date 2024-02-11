@@ -255,7 +255,7 @@ def main():
                         #X = df.iloc[:,:-1] # Using all column except for the last column as X
                         #Y = df.iloc[:,-1] # Selecting the last column as Y
                         all_columns_names = df.columns.tolist()
-                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,,default=all_columns_names[0])
+                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,default=all_columns_names[0])
                         X = df[selected_columns_name_x]
                         selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=2)
                         Y = df[selected_columns_name_y]
