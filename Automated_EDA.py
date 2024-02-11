@@ -255,9 +255,9 @@ def main():
                         #X = df.iloc[:,:-1] # Using all column except for the last column as X
                         #Y = df.iloc[:,-1] # Selecting the last column as Y
                         all_columns_names = df.columns.tolist()
-                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,default=all_columns_names[0])
+                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=str(1),default=all_columns_names[0])
                         X = df[selected_columns_name_x]
-                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=2)
+                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=str(2))
                         Y = df[selected_columns_name_y]
                         from sklearn.model_selection import train_test_split
                         xtrain,xtest,ytrain,ytest = train_test_split(X,Y,test_size=0.2)
@@ -299,10 +299,10 @@ def main():
                     elif ml_type == "Decision Tree Regression":
                         
                         all_columns_names = df.columns.tolist()
-                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,default=all_columns_names[0])
+                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=str(1),default=all_columns_names[0])
                         
                         X = df[selected_columns_name_x]
-                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=2)
+                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=str(2))
                         Y = df[selected_columns_name_y]
                         criterion_type = st.selectbox("Select Criterion Type",["squared_error","absolute_error","friedman_mse","poisson"])
                         maxdepth = st.selectbox("Select Max Depth",[2,3,4,5,6,7,8,9,10])
@@ -351,10 +351,10 @@ def main():
                     elif ml_type == "Random Forest Regression":
                         
                         all_columns_names = df.columns.tolist()
-                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,default=all_columns_names[0])
+                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=str(1),default=all_columns_names[0])
                         
                         X = df[selected_columns_name_x]
-                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=2)
+                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=str(2))
                         Y = df[selected_columns_name_y]
                         criterion_type = st.selectbox("Select Criterion Type",["squared_error","absolute_error","friedman_mse","poisson"])
                         maxfeatures = st.selectbox("Select Max Feature Type",["sqrt", "log2"])
@@ -397,10 +397,10 @@ def main():
                     elif ml_type == "KNN Regression":
                         
                         all_columns_names = df.columns.tolist()
-                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,default=all_columns_names[0])
+                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=str(1),default=all_columns_names[0])
                         
                         X = df[selected_columns_name_x]
-                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=2)
+                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=str(2))
                         Y = df[selected_columns_name_y]
                         weight_type = st.selectbox("Select Weight Type",["uniform", "distance"])
                         algorithm_type = st.selectbox("Select Algorithm Type",["auto", "ball_tree", "kd_tree", "brute"])
@@ -439,10 +439,10 @@ def main():
                     elif ml_type == "SVM Regression":
                         
                         all_columns_names = df.columns.tolist()
-                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,default=all_columns_names[0])
+                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=str(1),default=all_columns_names[0])
                         
                         X = df[selected_columns_name_x]
-                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=2)
+                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=str(2))
                         Y = df[selected_columns_name_y]
                         kernel_type = st.selectbox("Select Kernel Type",["linear", "poly", "rbf", "sigmoid", "precomputed"])
                         gamma_type = st.selectbox("Select Gamma Type",["scale", "auto"])
@@ -487,9 +487,9 @@ def main():
                         #X = df.iloc[:,:-1] # Using all column except for the last column as X
                         #Y = df.iloc[:,-1] # Selecting the last column as Y
                         all_columns_names = df.columns.tolist()
-                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,default=all_columns_names[0])
+                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=str(1),default=all_columns_names[0])
                         X = df[selected_columns_name_x]
-                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=2)
+                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=str(2))
                         from sklearn.preprocessing import LabelEncoder
                         le = LabelEncoder()
                         df[selected_columns_name_y] = le.fit_transform(df[selected_columns_name_y])
@@ -544,10 +544,10 @@ def main():
                     elif ml_type == "Decision Tree Classification":
                         
                         all_columns_names = df.columns.tolist()
-                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,default=all_columns_names[0])
+                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=str(1),default=all_columns_names[0])
                         
                         X = df[selected_columns_name_x]
-                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=2)
+                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=str(2))
                         Y = df[selected_columns_name_y]
                         criterion_type = st.selectbox("Select Criterion Type",["entropy", "gini", "log_loss"])
                         maxdepth = st.selectbox("Select Max Depth",[2,3,4,5,6,7,8,9,10])
@@ -605,10 +605,10 @@ def main():
                     elif ml_type == "Random Forest Classification":
                         
                         all_columns_names = df.columns.tolist()
-                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,default=all_columns_names[0])
+                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=str(1),default=all_columns_names[0])
                         
                         X = df[selected_columns_name_x]
-                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=2)
+                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=str(2))
                         Y = df[selected_columns_name_y]
                         criterion_type = st.selectbox("Select Criterion Type",["entropy", "gini", "log_loss"])
                         maxfeatures = st.selectbox("Select Max Feature Type",["sqrt", "log2"])
@@ -661,10 +661,10 @@ def main():
                     elif ml_type == "KNN Classification":
                         
                         all_columns_names = df.columns.tolist()
-                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,default=all_columns_names[0])
+                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=str(1),default=all_columns_names[0])
                         
                         X = df[selected_columns_name_x]
-                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=2)
+                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=str(2))
                         Y = df[selected_columns_name_y]
                         weight_type = st.selectbox("Select Weight Type",["uniform", "distance"])
                         algorithm_type = st.selectbox("Select Algorithm Type",["auto", "ball_tree", "kd_tree", "brute"])
@@ -713,10 +713,10 @@ def main():
                     elif ml_type == "SVM Classification":
                         
                         all_columns_names = df.columns.tolist()
-                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=1,default=all_columns_names[0])
+                        selected_columns_name_x = st.multiselect("Select dependent column",all_columns_names,key=str(1),default=all_columns_names[0])
                         
                         X = df[selected_columns_name_x]
-                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=2)
+                        selected_columns_name_y = st.selectbox("Select Independent column",all_columns_names,key=str(2))
                         Y = df[selected_columns_name_y]
                         kernel_type = st.selectbox("Select Kernel Type",["linear", "poly", "rbf", "sigmoid", "precomputed"])
                         gamma_type = st.selectbox("Select Gamma Type",["scale", "auto"])
