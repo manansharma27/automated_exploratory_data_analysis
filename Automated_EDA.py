@@ -12,7 +12,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
 # Data Viz Pkg
-#import matplotlib.image as img 
+import matplotlib.image as img 
 import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use("Agg")
