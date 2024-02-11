@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use("Agg")
 import seaborn as sb 
-from sklearn import tree
+from sklearn.tree import plot_tree
 from sklearn.metrics import accuracy_score
 #Reading image and storing it
 image = img.imread("eda.png")
@@ -328,7 +328,7 @@ def main():
                         
                         st.write("Decision Tree Graph for Model:-")
                         fig = plt.figure(figsize=(15,10))
-                        tree.plot_tree(dtr,filled=True)
+                        plot_tree(dtr,filled=True)
                         st.pyplot()
                             
                         st.write("Feature importance in model:-")
@@ -583,7 +583,7 @@ def main():
                         
                         st.write("Decision Tree Graph for Model:-")
                         fig = plt.figure(figsize=(15,10))
-                        tree.plot_tree(dtc,filled=True)
+                        plot_tree(dtc,filled=True)
                         st.pyplot()
                         
                         st.write("Feature importance in model:-")
