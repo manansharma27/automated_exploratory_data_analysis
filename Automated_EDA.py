@@ -19,10 +19,7 @@ matplotlib.use("Agg")
 import seaborn as sb 
 from sklearn.tree import plot_tree
 from sklearn.metrics import accuracy_score
-#Reading image and storing it
-image = img.imread("eda.png")
-#Displaying Image
-st.image(image)
+
 
 # Making a function to download csv file.
 def csv_download(data):
@@ -40,6 +37,10 @@ def main():
     choice = st.sidebar.selectbox("Select Options",task)   #Making a sidebar for selection of activity
     data = st.file_uploader("Upload a dataset to analysis",type=["csv"])
     if(choice == 'Data Exploration'):
+	#Reading image and storing it
+	image = img.imread("eda.png")
+	#Displaying Image
+	st.image(image)    
         st.subheader("Basic Data Exploration!")
         
         
@@ -92,6 +93,10 @@ def main():
                         st.write(feature, " - no")
                 
     elif choice == 'EDA':
+	#Reading image and storing it
+	image = img.imread("eda.png")
+	#Displaying Image
+	st.image(image)
         st.subheader("Data Visualization")
         #data= st.file_uploader("Upload a dataset",type=["csv"])
         if data is not None:
@@ -153,6 +158,10 @@ def main():
                         st.pyplot()
     
     elif choice == 'Fill Null Values':
+	#Reading image and storing it
+	image = img.imread("eda.png")
+	#Displaying Image
+	st.image(image)
         st.subheader("Fill Null Values")
         #data= st.file_uploader("Upload a dataset",type=["csv"])
         if data is not None:
