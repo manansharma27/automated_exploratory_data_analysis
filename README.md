@@ -9,7 +9,7 @@ App Visuals
 <img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/img1.PNG">
 <img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/img3.PNG">
 <img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/img4.PNG">
-<img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/ML1.PNG">
-<img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/ML2.PNG">
-<img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/ML3.PNG">
-<img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/ML4.PNG">
+<img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/ML1.png">
+<img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/ML2.png">
+<img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/ML3.png">
+<img src = "https://github.com/manansharma27/automated_exploratory_data_analysis/blob/main/ML4.png">
